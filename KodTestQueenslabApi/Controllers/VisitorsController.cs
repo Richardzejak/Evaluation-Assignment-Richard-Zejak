@@ -99,7 +99,7 @@ namespace KodTestQueenslabApi.Controllers
         // resets the department from visitors
         // DELETE: api/department/reset/5
         [Route("/api/department/reset/{id}")]
-        [HttpGet]
+        [HttpDelete]
         public async Task<ActionResult<string>> ResetDepartment(int id)
         {
             var departmentVisitors = await _context.Visitors.Include(d => d.Department).Where(dv => dv.Department.Id == id).ToListAsync();
