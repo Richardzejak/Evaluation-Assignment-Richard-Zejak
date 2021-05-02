@@ -11,5 +11,6 @@ namespace KodTestQueenslabApi.Models
         public int Id { get; set; }
         [DataType(DataType.Date)]
         public DateTime Time { get; set; }
+        public Department Department { get; set; }
     }
 }
