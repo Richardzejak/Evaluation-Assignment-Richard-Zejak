@@ -10,11 +10,10 @@ namespace KodTestQueenslabApi.Data
     {
         public static void Seeder(Context context)
         {
-            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             context.SaveChanges();
 
-
+            // Seeds in some sample departmens
             var departments = new Department[]
             {
                 new Department { Name = "Provisions", Details = "All sorts of food." },

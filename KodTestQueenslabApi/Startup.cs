@@ -34,7 +34,7 @@ namespace KodTestQueenslabApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "KodTestQueenslabApi", Version = "v1" });
             });
-
+            // Connection string is in appsettings.json
             services.AddDbContext<Context>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DbConn")));
         }
